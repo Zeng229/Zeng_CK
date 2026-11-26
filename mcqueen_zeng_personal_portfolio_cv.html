@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zeng Chak Kwai (McQueen) — Portfolio & CV</title>
+  <meta name="description" content="Personal portfolio and CV of Zeng Chak Kwai (McQueen) — Physical Education & Sports Coaching, Intercultural Exchange (HK ↔ Argentina), Youth Advocacy, and Event Operations." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              900: '#0F172A',
+              800: '#1E293B',
+              700: '#334155',
+            },
+            skyaccent: '#0EA5E9',
+            goldaccent: '#F59E0B',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Immediate Theme Initialization to Prevent Flash of Unstyled Content -->
+  <script>
+    (function () {
+      try {
+        const storedTheme = localStorage.getItem('mcqueen-cv-theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (e) {
+        // Fallback safely if localStorage is restricted in embedded previews
+      }
+    })();
+  </script>
+
+  <!-- Custom Minimal Styles for Reveal Animations & Print Layout -->
+  <style>
+    /* Subtle reveal-on-scroll transitions */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Clean Print / Save as PDF styling */
+    @media print {
+      @page {
+        margin: 1.2cm;
+        size: A4;
+      }
+      html, body {
+        background: #ffffff !important;
+        color: #0F172A !important;
+        font-size: 11pt !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .dark, .dark body {
+        background: #ffffff !important;
+        color: #0F172A !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      section {
+        padding-top: 1.25rem !important;
+        padding-bottom: 1.25rem !important;
+        break-inside: avoid;
+      }
+      .print-card {
+        box-shadow: none !important;
+        border: 1px solid #E2E8F0 !important;
+        background: #ffffff !important;
+        color: #0F172A !important;
+        break-inside: avoid;
+      }
+      .print-text-dark {
+        color: #0F172A !important;
+      }
+      .print-text-muted {
+        color: #475569 !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 dark:bg-[#0B1120] dark:text-slate-100 antialiased selection:bg-sky-500/20 selection:text-sky-700 dark:selection:text-sky-300 transition-colors duration-300 overflow-x-hidden">
+
+  <!-- ==================== TOP NAVIGATION BAR ==================== -->
+  <header class="no-print sticky top-0 z-40 w-full backdrop-blur-md bg-white/85 dark:bg-[#0B1120]/85 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Brand / Monogram -->
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none">
+          <span class="flex items-center justify-center w-9 h-9 rounded-xl bg-slate-900 dark:bg-sky-500 text-white font-display font-extrabold text-sm tracking-tight shadow-sm group-hover:scale-105 transition-transform">
+            MZ
+          </span>
+          <div class="leading-tight">
+            <span class="block font-display font-bold text-sm sm:text-base text-slate-900 dark:text-white tracking-tight">
+              McQueen Zeng
+            </span>
+            <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400">
+              HK &harr; Argentina
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-1">
+          <a href="#education" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Education</a>
+          <a href="#experience" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Experience</a>
+          <a href="#extracurricular" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Activities</a>
+          <a href="#achievements" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Achievements</a>
+          <a href="#skills" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Skills</a>
+          <a href="#contact" class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Controls: Print, Theme Toggle, Mobile Hamburger -->
+        <div class="flex items-center gap-2">
+          <!-- Print / Save PDF Button (Desktop) -->
+          <button
+            type="button"
+            onclick="window.print()"
+            class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200/80 dark:border-slate-700 transition-colors"
+            title="Print or Save CV as PDF"
+          >
+            <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6v-8z" />
+            </svg>
+            <span>Print CV</span>
+          </button>
+
+          <!-- Dark / Light Mode Toggle -->
+          <button
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle Dark Mode"
+            class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200/80 dark:border-slate-700 transition-colors"
+          >
+            <!-- Sun Icon (shown in Dark Mode) -->
+            <svg id="icon-sun" class="hidden dark:block w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41" />
+            </svg>
+            <!-- Moon Icon (shown in Light Mode) -->
+            <svg id="icon-moon" class="block dark:hidden w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-label="Open Navigation Menu"
+            aria-expanded="false"
+            class="md:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200/80 dark:border-slate-700 transition-colors"
+          >
+            <svg id="menu-open-icon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-close-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0B1120] px-4 pt-3 pb-5 space-y-1 shadow-lg">
+      <a href="#education" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Education</a>
+      <a href="#experience" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Work Experience</a>
+      <a href="#extracurricular" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Extra-Curricular Activities</a>
+      <a href="#achievements" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Achievements &amp; Honors</a>
+      <a href="#skills" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Languages &amp; Skills</a>
+      <a href="#contact" class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+      <div class="pt-2">
+        <button
+          type="button"
+          onclick="window.print()"
+          class="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold bg-slate-900 dark:bg-sky-500 text-white"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6v-8z" />
+          </svg>
+          Print / Save as PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="top" class="relative">
+
+    <!-- Subtle Editorial Ambient Background Accents (Sky Blue & Warm Gold) -->
+    <div class="no-print pointer-events-none absolute inset-x-0 top-0 h-[520px] overflow-hidden -z-10">
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-sky-400/15 dark:bg-sky-500/10 blur-3xl"></div>
+      <div class="absolute top-28 -left-24 w-80 h-80 rounded-full bg-amber-400/15 dark:bg-amber-500/10 blur-3xl"></div>
+    </div>
+
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-14 sm:pt-20 sm:pb-20">
+      <div class="max-w-4xl">
+        <!-- Editorial Eyebrow Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+          <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">
+            Hong Kong &harr; Argentina &middot; Curriculum Vitae
+          </span>
+        </div>
+
+        <!-- Primary Name Heading -->
+        <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-slate-900 dark:text-white print-text-dark leading-[1.08]">
+          ZENG CHAK KWAI
+          <span class="block sm:inline text-sky-600 dark:text-sky-400 font-bold mt-1 sm:mt-0 sm:ml-2">(McQueen)</span>
+        </h1>
+
+        <!-- Subtitle / Role Badges -->
+        <div class="mt-6 flex flex-wrap items-center gap-2">
+          <span class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium bg-slate-900 text-white dark:bg-slate-800 dark:text-sky-300 border border-slate-800 dark:border-slate-700">
+            Physical Education &amp; Sports Coaching
+          </span>
+          <span class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium bg-sky-50 text-sky-800 dark:bg-sky-950/60 dark:text-sky-300 border border-sky-200/80 dark:border-sky-800/70">
+            Intercultural Exchange (HK &harr; Argentina)
+          </span>
+          <span class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium bg-amber-50 text-amber-800 dark:bg-amber-950/50 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800/60">
+            Youth Advocacy
+          </span>
+          <span class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium bg-white text-slate-700 dark:bg-slate-900 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+            Event Operations
+          </span>
+        </div>
+
+        <!-- Print-Only Contact Line -->
+        <div class="hidden print:flex flex-wrap gap-6 mt-4 text-sm text-slate-700">
+          <span>Email: chakkwaizeng@gmail.com</span>
+          <span>Mobile: (852) 52229631</span>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="no-print mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href="mailto:chakkwaizeng@gmail.com"
+            class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 dark:bg-sky-500 dark:hover:bg-sky-400 text-white shadow-sm hover:shadow transition-all"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Email Me
+          </a>
+
+          <a
+            href="tel:+85252229631"
+            class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 shadow-sm transition-all"
+          >
+            <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            +852 5222 9631
+          </a>
+
+          <button
+            type="button"
+            onclick="window.print()"
+            class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm transition-all"
+          >
+            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download / Print CV
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Stats Highlight Strip -->
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Stat 1 -->
+        <div class="print-card p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Languages</span>
+            <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+            </svg>
+          </div>
+          <p class="font-display font-bold text-xl text-slate-900 dark:text-white print-text-dark">4 Languages</p>
+          <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 print-text-muted">Cantonese, Mandarin, English, Spanish</p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="print-card p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Global Exchange</span>
+            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+            </svg>
+          </div>
+          <p class="font-display font-bold text-xl text-slate-900 dark:text-white print-text-dark">1-Year Exchange</p>
+          <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 print-text-muted">Full-Scholarship in Argentina</p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="print-card p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Honors</span>
+            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8m-4-4v4m-7-9a7 7 0 0014 0V4H5v8zm14-6h2a1 1 0 011 1v2a3 3 0 01-3 3M5 6H3a1 1 0 00-1 1v2a3 3 0 003 3" />
+            </svg>
+          </div>
+          <p class="font-display font-bold text-xl text-slate-900 dark:text-white print-text-dark">2&times; Champion</p>
+          <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 print-text-muted">Indoor Rowing &amp; STEM Racing</p>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="print-card p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Operations</span>
+            <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <p class="font-display font-bold text-xl text-slate-900 dark:text-white print-text-dark">150+ Participants</p>
+          <p class="mt-1 text-xs text-slate-500 dark:text-slate-400 print-text-muted">Large-Scale Competition Event Ops</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. EDUCATION SECTION ==================== -->
+    <section id="education" class="scroll-mt-20 py-14 sm:py-16 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Heading -->
+        <div class="reveal mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Academic Background</span>
+          <h2 class="mt-1 font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white print-text-dark tracking-tight">
+            Education
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Education Card 1: AFS Physical Education Argentina -->
+          <article class="reveal print-card lg:col-span-7 p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-sky-50 dark:bg-sky-950/70 text-sky-700 dark:text-sky-300 border border-sky-200/70 dark:border-sky-800/70 mb-3">
+                    Argentina &middot; Physical Education
+                  </span>
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 dark:text-white print-text-dark">
+                    AFS Intercultural Exchange: Physical Education
+                  </h3>
+                  <p class="mt-1 text-sm font-medium text-slate-600 dark:text-slate-300 print-text-muted">
+                    Instituto Superior de Educación Física N&deg; 27, Argentina
+                  </p>
+                </div>
+                <span class="inline-flex items-center px-3 py-1 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 whitespace-nowrap">
+                  March 2026 &ndash; July 2026
+                </span>
+              </div>
+
+              <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-300 print-text-muted leading-relaxed">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>
+                  <span>
+                    <strong class="font-semibold text-slate-900 dark:text-white print-text-dark">Immersive Spanish Learning:</strong>
+                    Undertook academic coursework and practical sessions strictly in Spanish, strengthening professional language proficiency.
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>
+                  <span>
+                    <strong class="font-semibold text-slate-900 dark:text-white print-text-dark">Instruction &amp; Leadership:</strong>
+                    Trained in sports pedagogy, group facilitation, and athletic movement techniques applicable to youth coaching and team management.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Education Card 2: HKDSE Result -->
+          <article class="reveal print-card lg:col-span-5 p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200/70 dark:border-amber-800/60 mb-3">
+                    Hong Kong &middot; Public Examination
+                  </span>
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 dark:text-white print-text-dark">
+                    HKDSE Result
+                  </h3>
+                </div>
+                <div class="text-right px-3.5 py-2 rounded-xl bg-slate-900 dark:bg-sky-500/15 border border-slate-800 dark:border-sky-500/30">
+                  <span class="block text-[10px] font-bold uppercase tracking-wider text-slate-300 dark:text-sky-300">Best 5</span>
+                  <span class="block font-display font-extrabold text-2xl text-white dark:text-sky-400 leading-none mt-0.5">22</span>
+                </div>
+              </div>
+
+              <p class="mt-5 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                Subject Grades
+              </p>
+
+              <!-- Subject Badges Grid -->
+              <div class="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                <div class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700">
+                  <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Math</span>
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-sky-500 text-white font-display font-bold text-sm">5</span>
+                </div>
+                <div class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700">
+                  <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Econ</span>
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-sky-500 text-white font-display font-bold text-sm">5</span>
+                </div>
+                <div class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700">
+                  <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Phy</span>
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-slate-900 dark:bg-slate-700 text-white font-display font-bold text-sm">4</span>
+                </div>
+                <div class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700">
+                  <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">M2</span>
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-slate-900 dark:bg-slate-700 text-white font-display font-bold text-sm">4</span>
+                </div>
+                <div class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700">
+                  <span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Chi</span>
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-slate-900 dark:bg-slate-700 text-white font-display font-bold text-sm">4</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. WORK EXPERIENCE SECTION (TIMELINE) ==================== -->
+    <section id="experience" class="scroll-mt-20 py-14 sm:py-16 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Heading -->
+        <div class="reveal mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Professional Track</span>
+          <h2 class="mt-1 font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white print-text-dark tracking-tight">
+            Work Experience
+          </h2>
+        </div>
+
+        <!-- Timeline Wrapper -->
+        <div class="relative pl-6 sm:pl-8 border-l-2 border-slate-200 dark:border-slate-800 space-y-8">
+
+          <!-- Experience 1: First Education Group -->
+          <article class="reveal relative">
+            <span class="absolute -left-[33px] sm:-left-[41px] top-6 w-4 h-4 rounded-full bg-sky-500 ring-4 ring-slate-50 dark:ring-[#0B1120]"></span>
+            <div class="print-card p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 dark:text-white print-text-dark">
+                    Part-time Event Helper
+                  </h3>
+                  <p class="mt-0.5 text-sm font-semibold text-sky-600 dark:text-sky-400">
+                    First Education Group
+                  </p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-semibold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200/70 dark:border-sky-800/60">
+                  Aug 2026 &ndash; Present
+                </span>
+              </div>
+
+              <ul class="mt-4 space-y-2.5 text-sm text-slate-600 dark:text-slate-300 print-text-muted leading-relaxed">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>
+                  <span>
+                    Ensured smooth end-to-end operations for large-scale competitions (Dance, Mathematics) with 150+ participants each, including pre-event setup, participant check-in, stage flow coordination, and post-event cleanup.
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>
+                  <span>
+                    Performed real-time crisis management, such as resolving last-minute participant absences, technical glitches (audio), and schedule delays without disrupting the event experience.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Experience 2: BGCA Hong Kong — SDG Youth Adviser -->
+          <article class="reveal relative">
+            <span class="absolute -left-[33px] sm:-left-[41px] top-6 w-4 h-4 rounded-full bg-slate-900 dark:bg-slate-600 ring-4 ring-slate-50 dark:ring-[#0B1120]"></span>
+            <div class="print-card p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 dark:text-white print-text-dark">
+                    SDG Youth Adviser
+                  </h3>
+                  <p class="mt-0.5 text-sm font-semibold text-sky-600 dark:text-sky-400">
+                    BGCA Hong Kong
+                  </p>
+                </div>
+                <span class="inline-flex items-center px-3 py-1 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                  June 2025 &ndash; Aug 2025
+                </span>
+              </div>
+
+              <ul class="mt-4 space-y-2.5 text-sm text-slate-600 dark:text-slate-300 print-text-muted leading-relaxed">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-500 shrink-0"></span>
+                  <span>
+                    <strong class="font-semibold text-slate-900 dark:text-white print-text-dark">Cross-Functional Teamwork:</strong>
+                    Coordinated with both youth peers and adult mentors to design and deliver a cohesive SDG-themed exhibition booth.
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-500 shrink-0"></span>
+                  <span>
+                    <strong class="font-semibold text-slate-900 dark:text-white print-text-dark">Event Operations:</strong>
+                    Managed booth logistics, interactive sessions, and visual displays to attract and hold attendee interest during the event.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Experience 3: BGCA Hong Kong — Youth Adviser (Tuen Mun Center) -->
+          <article class="reveal relative">
+            <span class="absolute -left-[33px] sm:-left-[41px] top-6 w-4 h-4 rounded-full bg-slate-900 dark:bg-slate-600 ring-4 ring-slate-50 dark:ring-[#0B1120]"></span>
+            <div class="print-card p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 dark:text-white print-text-dark">
+                    Youth Adviser (Tuen Mun Center)
+                  </h3>
+                  <p class="mt-0.5 text-sm font-semibold text-sky-600 dark:text-sky-400">
+                    BGCA Hong Kong
+                  </p>
+                </div>
+                <span class="inline-flex items-center px-3 py-1 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                  Sep 2024 &ndash; Feb 2025
+                </span>
+              </div>
+
+              <ul class="mt-4 space-y-2.5 text-sm text-slate-600 dark:text-slate-300 print-text-muted leading-relaxed">
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-500 shrink-0"></span>
+                  <span>
+                    <strong class="font-semibold text-slate-900 dark:text-white print-text-dark">Youth Advocacy:</strong>
+                    Represented Hong Kong youth to articulate their needs and promote a supportive, inclusive community environment.
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-2 w-1.5 h-1.5 rounded-full bg-slate-400 dark:bg-slate-500 shrink-0"></span>
+                  <span>
+                    <strong class="font-semibold text-slate-900 dark:text-white print-text-dark">Content &amp; Workshop Design:</strong>
+                    Developed educational workshops and activities, simplifying global sustainability challenges into actionable youth-led initiatives.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. EXTRA-CURRICULAR ACTIVITIES SECTION ==================== -->
+    <section id="extracurricular" class="scroll-mt-20 py-14 sm:py-16 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Heading -->
+        <div class="reveal mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Global Citizenship &amp; Leadership</span>
+          <h2 class="mt-1 font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white print-text-dark tracking-tight">
+            Extra-Curricular Activities
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Activity 1: AFS Volunteer -->
+          <article class="reveal print-card p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200/70 dark:border-sky-800/60 mb-3">
+                  Mentorship &amp; Community
+                </span>
+                <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 dark:text-white print-text-dark">
+                  Volunteer
+                </h3>
+                <p class="mt-0.5 text-sm font-medium text-slate-600 dark:text-slate-300 print-text-muted">
+                  AFS Intercultural Exchange
+                </p>
+              </div>
+              <span class="inline-flex items-center px-3 py-1 rounded-xl text-xs font-semibold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200/70 dark:border-sky-800/60">
+                Aug 2026 &ndash; Present
+              </span>
+            </div>
+
+            <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-300 print-text-muted leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>
+                <span>
+                  <strong class="font-semibold text-slate-900 dark:text-white print-text-dark">Student Mentorship:</strong>
+                  Facilitate intercultural learning sessions, drawing on personal exchange experience in Argentina to support students facing language/cultural challenges.
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>
+                <span>
+                  <strong class="font-semibold text-slate-900 dark:text-white print-text-dark">Community Leadership:</strong>
+                  Collaborate with adult volunteers and staff to streamline event operations, driving engagement across the global AFS network.
+                </span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Activity 2: AFS Exchange Full-Scholarship Student -->
+          <article class="reveal print-card p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200/70 dark:border-amber-800/60 mb-3">
+                  Full-Scholarship &middot; Argentina
+                </span>
+                <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 dark:text-white print-text-dark">
+                  Exchange Full-Scholarship Student
+                </h3>
+                <p class="mt-0.5 text-sm font-medium text-slate-600 dark:text-slate-300 print-text-muted">
+                  AFS Intercultural Exchange
+                </p>
+              </div>
+              <span class="inline-flex items-center px-3 py-1 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                Sep 2025 &ndash; July 2026
+              </span>
+            </div>
+
+            <ul class="mt-5 space-y-3 text-sm text-slate-600 dark:text-slate-300 print-text-muted leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                <span>
+                  Rapidly adapted to a novel linguistic and cultural environment in Argentina within 1 year; demonstrated high resilience, self-reliance, and proactive problem-solving under uncertainty.
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                <span>
+                  Overcame language barriers to coach local Argentinian athletes on indoor rowing techniques, designing tailored instruction to improve their performance.
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                <span>
+                  Developed strong intercultural empathy and communication skills by building deep relationships with host families, local schools, and an international exchange cohort.
+                </span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. ACHIEVEMENTS & HONORS SECTION ==================== -->
+    <section id="achievements" class="scroll-mt-20 py-14 sm:py-16 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Heading -->
+        <div class="reveal mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-600 dark:text-amber-400">Recognition &amp; Excellence</span>
+          <h2 class="mt-1 font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white print-text-dark tracking-tight">
+            Achievements &amp; Honors
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Award 1: Scholarship -->
+          <article class="reveal print-card group p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:border-amber-400/70 dark:hover:border-amber-500/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="flex items-center justify-center w-11 h-11 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 border border-amber-200/70 dark:border-amber-800/60">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                  </svg>
+                </span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                  AFSHK &middot; 25/26
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white print-text-dark leading-snug">
+                The Chater Masonic Scholarship Fund Trust
+              </h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 print-text-muted">
+                For 1 year AFS Intercultural Exchange programme
+              </p>
+            </div>
+          </article>
+
+          <!-- Award 2: Indoor Rowing Champion -->
+          <article class="reveal print-card group p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:border-sky-400/70 dark:hover:border-sky-500/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="flex items-center justify-center w-11 h-11 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 border border-sky-200/70 dark:border-sky-800/60">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8m-4-4v4m-7-9a7 7 0 0014 0V4H5v8zm14-6h2a1 1 0 011 1v2a3 3 0 01-3 3M5 6H3a1 1 0 00-1 1v2a3 3 0 003 3" />
+                  </svg>
+                </span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                  HKSSF &middot; 24/25
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white print-text-dark leading-snug">
+                Champion, Boys A 500m
+              </h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 print-text-muted">
+                New Territories Inter-School Indoor Rowing Competition 2024/2025
+              </p>
+            </div>
+          </article>
+
+          <!-- Award 3: STEM Racing Grand Champion -->
+          <article class="reveal print-card group p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:border-amber-400/70 dark:hover:border-amber-500/50 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="flex items-center justify-center w-11 h-11 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 border border-amber-200/70 dark:border-amber-800/60">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                  HKPC &middot; 2022
+                </span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white print-text-dark leading-snug">
+                Grand Champion, STEM Racing
+              </h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 print-text-muted">
+                (Formerly F1 in Schools) STEM Competition Hong Kong Finals
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. LANGUAGES & SKILLS SECTION ==================== -->
+    <section id="skills" class="scroll-mt-20 py-14 sm:py-16 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Heading -->
+        <div class="reveal mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Core Capabilities</span>
+          <h2 class="mt-1 font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white print-text-dark tracking-tight">
+            Languages &amp; Skills
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Languages Card -->
+          <div class="reveal print-card lg:col-span-6 p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+            <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white print-text-dark mb-5">
+              Languages
+            </h3>
+
+            <div class="space-y-5">
+              <!-- Cantonese -->
+              <div>
+                <div class="flex items-center justify-between text-sm mb-1.5">
+                  <span class="font-semibold text-slate-800 dark:text-slate-100 print-text-dark">Cantonese</span>
+                  <span class="text-xs font-semibold text-sky-600 dark:text-sky-400">Native</span>
+                </div>
+                <div class="w-full h-2.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                  <div class="h-full w-full rounded-full bg-slate-900 dark:bg-sky-500"></div>
+                </div>
+              </div>
+
+              <!-- Mandarin -->
+              <div>
+                <div class="flex items-center justify-between text-sm mb-1.5">
+                  <span class="font-semibold text-slate-800 dark:text-slate-100 print-text-dark">Mandarin</span>
+                  <span class="text-xs font-semibold text-sky-600 dark:text-sky-400">Native</span>
+                </div>
+                <div class="w-full h-2.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                  <div class="h-full w-full rounded-full bg-slate-900 dark:bg-sky-500"></div>
+                </div>
+              </div>
+
+              <!-- English -->
+              <div>
+                <div class="flex items-center justify-between text-sm mb-1.5">
+                  <span class="font-semibold text-slate-800 dark:text-slate-100 print-text-dark">English</span>
+                  <span class="text-xs font-semibold text-amber-600 dark:text-amber-400">Proficient</span>
+                </div>
+                <div class="w-full h-2.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                  <div class="h-full w-[85%] rounded-full bg-sky-500 dark:bg-sky-400"></div>
+                </div>
+              </div>
+
+              <!-- Spanish -->
+              <div>
+                <div class="flex items-center justify-between text-sm mb-1.5">
+                  <span class="font-semibold text-slate-800 dark:text-slate-100 print-text-dark">Spanish</span>
+                  <span class="text-xs font-semibold text-amber-600 dark:text-amber-400">Proficient</span>
+                </div>
+                <div class="w-full h-2.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                  <div class="h-full w-[85%] rounded-full bg-amber-500 dark:bg-amber-400"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical & Creative Skills Card -->
+          <div class="reveal print-card lg:col-span-6 p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+            <div>
+              <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white print-text-dark mb-5">
+                Technical &amp; Digital Skills
+              </h3>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <!-- Skill 1 -->
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 flex items-start gap-3">
+                  <span class="p-2 rounded-lg bg-white dark:bg-slate-900 text-sky-600 dark:text-sky-400 shadow-xs border border-slate-200/60 dark:border-slate-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-sm text-slate-900 dark:text-white print-text-dark">Microsoft Office</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Word, Excel, PowerPoint</p>
+                  </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 flex items-start gap-3">
+                  <span class="p-2 rounded-lg bg-white dark:bg-slate-900 text-amber-600 dark:text-amber-400 shadow-xs border border-slate-200/60 dark:border-slate-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-sm text-slate-900 dark:text-white print-text-dark">Canva</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Visual &amp; Exhibition Design</p>
+                  </div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 flex items-start gap-3">
+                  <span class="p-2 rounded-lg bg-white dark:bg-slate-900 text-sky-600 dark:text-sky-400 shadow-xs border border-slate-200/60 dark:border-slate-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-sm text-slate-900 dark:text-white print-text-dark">AI Tools</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Productivity &amp; Workflows</p>
+                  </div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/80 dark:border-slate-700/80 flex items-start gap-3">
+                  <span class="p-2 rounded-lg bg-white dark:bg-slate-900 text-amber-600 dark:text-amber-400 shadow-xs border border-slate-200/60 dark:border-slate-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-sm text-slate-900 dark:text-white print-text-dark">Video Editing</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Digital Media Production</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CONTACT SECTION ==================== -->
+    <section id="contact" class="no-print scroll-mt-20 py-14 sm:py-20 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal rounded-3xl bg-slate-900 dark:bg-slate-900/95 border border-slate-800 p-7 sm:p-10 lg:p-12 text-white shadow-xl relative overflow-hidden">
+          <!-- Subtle Corner Glow -->
+          <div class="pointer-events-none absolute -top-20 -right-20 w-72 h-72 rounded-full bg-sky-500/20 blur-3xl"></div>
+          <div class="pointer-events-none absolute -bottom-24 -left-16 w-64 h-64 rounded-full bg-amber-500/15 blur-3xl"></div>
+
+          <div class="relative z-10 max-w-2xl">
+            <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Get in Touch</span>
+            <h2 class="mt-2 font-display font-extrabold text-2xl sm:text-3xl tracking-tight">
+              Let&rsquo;s Connect
+            </h2>
+            <p class="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
+              Open to opportunities in sports coaching, youth advocacy, intercultural initiatives, and event operations. Click any contact card below to copy directly or reach out right away.
+            </p>
+          </div>
+
+          <div class="relative z-10 mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Email Contact Card -->
+            <div class="p-5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-4 min-w-0">
+                <span class="flex items-center justify-center w-11 h-11 rounded-xl bg-sky-500/20 text-sky-400 shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </span>
+                <div class="min-w-0">
+                  <span class="block text-xs font-medium text-slate-400">Email Address</span>
+                  <a href="mailto:chakkwaizeng@gmail.com" class="block font-semibold text-sm sm:text-base text-white hover:text-sky-300 truncate transition-colors">
+                    chakkwaizeng@gmail.com
+                  </a>
+                </div>
+              </div>
+              <button
+                type="button"
+                onclick="copyToClipboard('chakkwaizeng@gmail.com', 'Email address')"
+                class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/10 transition-colors shrink-0"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                Copy
+              </button>
+            </div>
+
+            <!-- Mobile Contact Card -->
+            <div class="p-5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-4 min-w-0">
+                <span class="flex items-center justify-center w-11 h-11 rounded-xl bg-amber-500/20 text-amber-400 shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </span>
+                <div class="min-w-0">
+                  <span class="block text-xs font-medium text-slate-400">Mobile (Hong Kong)</span>
+                  <a href="tel:+85252229631" class="block font-semibold text-sm sm:text-base text-white hover:text-amber-300 truncate transition-colors">
+                    (852) 52229631
+                  </a>
+                </div>
+              </div>
+              <button
+                type="button"
+                onclick="copyToClipboard('(852) 52229631', 'Mobile number')"
+                class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/10 transition-colors shrink-0"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                Copy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="no-print border-t border-slate-200/80 dark:border-slate-800/80 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
+      <p>&copy; <span id="footer-year">2026</span> Zeng Chak Kwai (McQueen). All rights reserved.</p>
+      <p class="flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-slate-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+        </svg>
+        <span>Hosted on GitHub Pages</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div
+    id="toast"
+    role="status"
+    aria-live="polite"
+    class="no-print fixed bottom-5 right-5 z-50 pointer-events-none opacity-0 translate-y-3 transition-all duration-300"
+  >
+    <div class="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-lg border border-slate-700 dark:border-slate-200 text-sm font-semibold">
+      <svg class="w-4 h-4 text-sky-400 dark:text-sky-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+      <span id="toast-message">Copied to clipboard</span>
+    </div>
+  </div>
+
+  <!-- ==================== INTERACTIVE SCRIPTS ==================== -->
+  <script>
+    /**
+     * Toggle Dark / Light Mode and persist preference
+     */
+    (function initThemeToggle() {
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (!toggleBtn) return;
+
+      toggleBtn.addEventListener('click', function () {
+        const isDark = document.documentElement.classList.toggle('dark');
+        try {
+          localStorage.setItem('mcqueen-cv-theme', isDark ? 'dark' : 'light');
+        } catch (e) {
+          // Safe fallback in restricted iframe environments
+        }
+      });
+    })();
+
+    /**
+     * Responsive Mobile Navigation Menu Toggle
+     */
+    (function initMobileMenu() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const openIcon = document.getElementById('menu-open-icon');
+      const closeIcon = document.getElementById('menu-close-icon');
+      const links = document.querySelectorAll('.mobile-nav-link');
+
+      if (!btn || !menu) return;
+
+      function setMenuState(isOpen) {
+        menu.classList.toggle('hidden', !isOpen);
+        openIcon.classList.toggle('hidden', isOpen);
+        closeIcon.classList.toggle('hidden', !isOpen);
+        btn.setAttribute('aria-expanded', String(isOpen));
+      }
+
+      btn.addEventListener('click', function () {
+        const isCurrentlyHidden = menu.classList.contains('hidden');
+        setMenuState(isCurrentlyHidden);
+      });
+
+      links.forEach(function (link) {
+        link.addEventListener('click', function () {
+          setMenuState(false);
+        });
+      });
+    })();
+
+    /**
+     * Subtle Reveal-on-Scroll Observer
+     */
+    (function initScrollReveal() {
+      const elements = document.querySelectorAll('.reveal');
+      if (!elements.length) return;
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          function (entries, obs) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+        );
+
+        elements.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback for older browsers
+        elements.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      }
+    })();
+
+    /**
+     * Copy Text to Clipboard (iframe-safe via execCommand) with Toast Feedback
+     */
+    let toastTimer = null;
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      if (!toast || !toastMsg) return;
+
+      toastMsg.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-3');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-3');
+      }, 2600);
+    }
+
+    function copyToClipboard(text, label) {
+      try {
+        const tempInput = document.createElement('textarea');
+        tempInput.value = text;
+        tempInput.setAttribute('readonly', '');
+        tempInput.style.position = 'fixed';
+        tempInput.style.left = '-9999px';
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, text.length);
+        const copied = document.execCommand('copy');
+        document.body.removeChild(tempInput);
+
+        if (copied) {
+          showToast(label + ' copied: ' + text);
+        } else {
+          showToast('Unable to copy automatically');
+        }
+      } catch (err) {
+        showToast('Unable to copy automatically');
+      }
+    }
+
+    /**
+     * Keep Footer Copyright Year Current
+     */
+    (function updateFooterYear() {
+      const yearEl = document.getElementById('footer-year');
+      if (yearEl) {
+        yearEl.textContent = String(new Date().getFullYear());
+      }
+    })();
+  </script>
+</body>
+</html>
